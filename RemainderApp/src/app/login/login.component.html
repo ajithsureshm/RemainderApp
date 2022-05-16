@@ -1,5 +1,3 @@
-
-
 <div class="img" [style.background-image]="'url(/assets/login.img' + ')'">
 
 
@@ -11,7 +9,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form [formGroup]=loginForm (ngSubmit)="login()">
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -20,32 +18,32 @@
                             <!-- template reference -->
                             <!-- two way binding using ngModel -->
 
-                            <input type="text" name="acno" formControlName="acno" class="form-control"
-                                [placeholder]="accNum" id="login_accno" required>
+                            <input type="text" name="userId" formControlName="userId" class="form-control"
+                               placeholder="User ID" id="login_userId" required>
 
                         </div>
 
-                        <div *ngIf="(this.loginForm.get('acno')?.touched) && this.loginForm.get('acno')?.errors"
-                            style="color: red;">invalid account Number</div>
+                        <div *ngIf="(this.loginForm.get('userId')?.touched) && this.loginForm.get('userId')?.errors"
+                            style="color: red;">invalid user ID</div>
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
                             <input type="password" name="pwd" formControlName="pwd" class="form-control"
-                                placeholder="password" id="login_password" required>
+                               placeholder="Password" id="login_password" required>
                         </div>
 
-                        <div *ngIf="(this.loginForm.get('acno')?.touched) && this.loginForm.get('acno')?.errors"
-                            style="color: red;">invalid account Number</div>
+                        <div *ngIf="(this.loginForm.get('pwd')?.touched) && this.loginForm.get('pwd')?.errors"
+                            style="color: red;">invalid password </div>
 
 
                         <div class="form-group">
-                            <input type="submit" value="Login" class="btn float-right login_btn " style="width:50%">
+                            <input type="submit" value="Login" class="btn login_btn " style="width:50%; border: 1px solid rgb(169, 169, 247); ">
                         </div>
                     </form>
                 </div>
-                <p style="color:white;align-items:baseline;">Not a user? <a routerLink="register">Register</a></p>
+                <p style="color:rgb(14, 13, 13);align-items:baseline;">Not a user? <a routerLink="register">Register</a></p>
             </div>
         </div>
     </div>

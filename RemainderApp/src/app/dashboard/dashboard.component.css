@@ -1,0 +1,25 @@
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+
+
+.img {
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    height: 100%;
+    width: 100%;
+    font-family: 'Numans', sans-serif;
+    padding-bottom: 180px;
+    padding-top: 100px;
+
+
+}
+
+.card {
+    margin-top: 80px;
+    /* margin-left: 50%; */
+}
