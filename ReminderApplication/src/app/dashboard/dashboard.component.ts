@@ -15,6 +15,9 @@ export class DashboardComponent implements OnInit {
     events: ['', Validators.required]
   })
 
+  currentUser = JSON.parse(localStorage.getItem('currentUser') || '')
+
+
   constructor(private fb: FormBuilder, private ds: DataService, private router: Router) { }
 
   ngOnInit(): void {

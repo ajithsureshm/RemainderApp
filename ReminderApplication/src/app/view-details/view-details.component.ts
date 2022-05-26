@@ -55,4 +55,12 @@ export class ViewDetailsComponent implements OnInit {
         })
   }
 
+
+  edit(){
+
+    var userId = JSON.parse(localStorage.getItem('currentUserId') || '')
+
+    this.ds.edit(userId)
+    
+  }
 }

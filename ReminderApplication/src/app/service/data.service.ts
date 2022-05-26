@@ -83,11 +83,23 @@ export class DataService {
 
   deleteAcc(userId: any) {
 
-   
 
-    return this.http.delete(' http://localhost:3000/deleteAcc/'+userId)
+
+    return this.http.delete(' http://localhost:3000/deleteAcc/' + userId)
 
   }
+
+  // edit
+
+  edit(userId:any){
+
+    const data={
+      userId
+    }
+
+    return this.http.post('http://localhost:3000/viewDetails',data)
+  }
+
 
 
 }

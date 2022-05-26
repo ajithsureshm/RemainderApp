@@ -181,6 +181,15 @@ const addEvent =(userId, date,events)=>{
         }
     })
 }
+
+// edit
+
+const edit=(userId)=>{
+
+    return db.User.findOne({userId})
+
+    
+}
  
 
 // export

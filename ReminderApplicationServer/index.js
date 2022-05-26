@@ -95,6 +95,13 @@ app.delete('/deleteAcc/:userId',(req,res)=>{
     })
 })
 
+// edit
+
+app.post('/edit',(req,res)=>{
+    dataservice.edit(req.body.userId)
+
+
+})
 
 // define port number
 app.listen(3000, () => {
